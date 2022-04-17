@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+ 
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myinput"/>
+    <input type="button" value="submit" onclick="Show_Alert('myinput')" />
+    <!-- <button>submit</button> -->
+    <script>
+        function Show_Alert(Input_Id) {
+           var message = document.getElementById(Input_Id).value;
+            alert(message);
+            
+        }
+        
+        
+        
+    </script>
+    
+</body>
+</html>

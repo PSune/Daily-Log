@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>custom object creation using Literal constructor</title>
+        <script>
+            //3rd way of creating objects (Literal object) having properties and functions
+            
+            var blogpost = {
+                title : "Java",
+                text: "Is a object oriented language",
+                displayDetails: function(){
+                    document.write(this.title+"<br/>");
+                    document.write(this.text);                }
+            };
+            blogpost.displayDetails();
+
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Student Portal</title>
+    <link rel="stylesheet" href="Task_1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+      $(document).ready(function () {
+        var rowIdx = 0;
+        $("#save").click(function () {
+          var fname = $("#fname").val();
+
+          var lname = $("#lname").val();
+          var email = $("#email").val();
+          var mob = $("#mob").val();
+          var age = $("#age").val();
+          var gender = $("input[type='radio'][name='gender']:checked").val();
+
+          $("#tbody").append(`<tr id="${++rowIdx}">
+            <td><p>${fname} ${lname}</p></td>
+            <td><p>${email}</p></td>
+            <td><p>${mob}</p></td>
+            <td><p>${gender}</p></td>
+            <td><p>${age}</p></td>
+            </tr>`);
+
+          var table = $("#myTable");
+          var row = table.insertRow(0);
+          var cell1 = row.insertCell(0);
+          cell1.innerHtml = fname;
+
+          //alert(fname);
+          //alert(lname);
+          //alert(email);
+          //alert(mob);
+          //alert(age);
+          //alert(gender);
+        });
+      });
+    </script>
+  </head>
+ 
+
+  <body  class="display-topmiddle">
+    <h1>Student Portal</h1>
+    <form style="margin-top: 20px"; margin="center">
+      <div class="row">
+        <div class="column">
+          <label for="html" >First Name :</label>
+          <input type="text" id="fname" name="fname" placeholder="Enter First Name" />
+          <label for="html">Last Name :</label>
+          <input type="text" id="lname" name="lname" placeholder="Enter Last Name"/><br /><br />
+        </div>
+      </div>
+
+<label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email" width="200px" /><br /><br />
+      <label for="mob" >Mobile Number :</label>
+      <input type="text" id="mob" name="mob" placeholder="Enter Mobile no."/><br /><br />
+
+      <label for="html">Gender :</label>
+
+      <input type="radio" id="male" name="gender" value="Male" />
+      <label for="html">Male</label>
+      <input type="radio" id="female" name="gender" value="Female" />
+      <label for="css">Female</label><br /><br />
+
+      <label for="html" >Age :</label>
+<input type="number" id="age" name="age" placeholder="Enter Age"/><br /><br />
+
+      <input type="button" value="Save" id="save"  class="container" style="background-color:rgb(39, 189, 64);color:white;width:70px;height:30px;" />
+      <input type="submit" value="Clear" class="container" formtarget="_blank" color="red" style="background-color:rgb(199, 73, 15);color:white;width:70px;height:30px"; cursor="pointer" />
+    </form>
+
+    <div style="margin-top: 20px">
+      <table style="width: 70%" id="myTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th>Gender</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

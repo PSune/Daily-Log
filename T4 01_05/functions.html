@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function titleCase(str,str2,num1,num2) {
+            //created function 
+            var mul = num1 * num2; 
+            var splitStr = str.toLowerCase().split(' ');
+            
+           
+            // ["todays","weather", "is" ,"very", "cold"]
+
+            // spliting input string in to seperate part
+            for (var i = 0; i < splitStr.length; i++) {
+                console.log(splitStr)
+                // You do not need to check if i is larger than splitStr length, as your for does that for you
+                // Assign it back to the array
+                splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+            }
+            // Directly return the joined string
+            
+            return splitStr.join(' ') +" "+ str2 + " " + mul;
+            
+        }
+        
+
+        document.write(titleCase("todays weather is very cold","todays weather is hot",3,2));
+
+
+        // document.write(titleCase("todays weather is hot"))
+
+
+
+
+
+
+
+
+
+
+
+
+    //     function userMassage(color) {
+
+    //         let str = color.toLowerCase();
+    //         return str;
+
+    //     } let myColor = userMassage("Ramesh")
+
+
+    //     document.write(myColor);
+    // </script>
+
+</body>
+
+</html>

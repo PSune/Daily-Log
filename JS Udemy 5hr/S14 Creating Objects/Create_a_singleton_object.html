@@ -1,0 +1,18 @@
+   <html>
+       <head>
+           <title>Custom singleton object Creation</title>
+           <script>
+               var blogpost = new function(){
+                   this.title ="Ruby on rails",
+                   this.text = "Rapid web development",
+                   this.displayDetails = function(){
+                       document.write(this.title +"<br/>");                    
+                       document.write(this.text);                     
+                   }
+                   };
+                   //to use the above function we have to call
+                   blogpost.displayDetails();
+           </script>
+           
+       </head>
+   </html>

@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>custom objects creation using function</title>
+    <script>
+        function blogpost(title, text) {
+            this.title = title;
+            this.text = text;
+            this.addCategory = addCategory;
+            this.displayBlogPost = displayBlogPost;
+
+        }
+        function addCategory(category) {
+            this.category = category;
+        }
+        // we created method  displayBlogpost to avoid repeatation of dsplaying result 
+        //and we have assigned this method to object blogpost 
+        //and we are invoking it once we create the object bp1 , bp2
+        function displayBlogPost() {
+            document.write(this.title + "<br/>");
+            document.write(this.text + "<br/>");
+            document.write(this.category + "<br/>");
+
+        }
+
+        var bp1 = new blogpost("JQuery", "Makes js easier to use");
+        bp1.addCategory("UI Technology");
+        bp1.displayBlogPost();
+       
+
+
+        var bp2 = new blogpost("AngularJS", "To Build Single Page Apps!!");
+        bp2.addCategory("Advance UI technology");
+        bp2.displayBlogPost();
+       
+
+    </script>
+</head>
+
+</html>

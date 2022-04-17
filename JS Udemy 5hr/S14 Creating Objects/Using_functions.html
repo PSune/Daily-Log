@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>custom objects creation using function</title>
+    <script>
+        function blogpost(title, text) {
+            this.title = title;
+            this.text = text;
+
+        }
+
+
+        var bp1 = new blogpost("JQuery", "Makes js easier to use");
+        document.write(bp1.title + "<br/>");
+        document.write(bp1.text + "<br/>");
+
+
+        var bp2 = new blogpost("AngularJs", "To Build single page apps!!");
+        document.write(bp2.title + "<br/>");
+        document.write(bp2.text + "<br/>");
+
+
+
+
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM: create and remove nodes</title>
+    <script>
+        function handleRemove() {
+            var parent = document.getElementById("div1");
+            var child = document.getElementById("p2");
+            parent.removeChild(child);
+        }
+        function handleCreate() {
+            var parent = document.getElementById("div1");
+            var child = document.createElement("p");
+            var text = document.createTextNode("I am new in here.")
+            child.appendChild(text);
+            parent.appendChild(child);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <p id="p1">Now I am learning JS</p>
+        <p id="p2">After that you have to learn React JS</p>
+
+
+    </div>
+    <input type="button" value="remove" onclick="handleRemove()">
+    <input type="button" value="create" onclick="handleCreate()">
+</body>
+
+</html>
